@@ -1,3 +1,4 @@
+import { TransferenciaService } from './../services/transferencia.service';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -10,6 +11,8 @@ export class NovaTransferenciaComponent {
 
   valor: number = 0;
   destino: number = 0;
+
+  constructor(private service: TransferenciaService) {}
 
   transferir() {
     console.log('Solicitada nova transferência');
