@@ -27,6 +27,27 @@
       "tipo": "Depósito",
       "data": "2022-09-14T15:56:32.096Z",
       "id": 4
+    },
+    {
+      "valor": 99.99,
+      "destino": "123-08",
+      "tipo": "Depósito",
+      "data": "2022-09-14T16:14:56.174Z",
+      "id": 5
+    },
+    {
+      "valor": 10.5,
+      "destino": "123-07",
+      "tipo": "Depósito",
+      "data": "2022-09-14T16:17:44.384Z",
+      "id": 6
+    },
+    {
+      "valor": 12.99,
+      "destino": "122-22",
+      "tipo": "Transferência",
+      "data": "2022-09-14T16:18:08.714Z",
+      "id": 7
     }
   ]
 }

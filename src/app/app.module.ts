@@ -1,3 +1,4 @@
+import { FormularioComponent } from './formularios/formulario/formulario.component';
 import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
 import { LOCALE_ID, NgModule, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,8 @@ registerLocaleData(LocalePt, 'pt');
     AppComponent,
     NovaTransferenciaComponent,
     ExtratoComponent,
-    NovoDepositoComponent
+    NovoDepositoComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
