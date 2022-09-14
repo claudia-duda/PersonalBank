@@ -1,46 +1,32 @@
 {
   "transferencias": [
     {
-      "id": "1",
-      "valor": 35,
-      "destino": "1212-1",
-      "data": "2020-11-04T16:30:10.710Z"
+      "valor": 15,
+      "destino": "0123-05",
+      "tipo": "Transferência",
+      "data": "2022-09-14T15:25:25.743Z",
+      "id": 1
     },
     {
-      "id": "2",
-      "valor": 40,
-      "destino": "1213-1",
-      "data": "2020-11-04T21:24:10.710Z"
+      "valor": 20,
+      "destino": "0123-04",
+      "tipo": "Transferência",
+      "data": "2022-09-14T15:26:01.062Z",
+      "id": 2
     },
     {
-      "id": "3",
-      "valor": 12.5,
-      "destino": "1214-1",
-      "data": "2020-11-05T21:14:10.710Z"
+      "valor": 50,
+      "destino": "0123-03",
+      "tipo": "Depósito",
+      "data": "2022-09-14T15:26:26.918Z",
+      "id": 3
     },
     {
-      "valor": 69,
-      "destino": "8783",
-      "data": "2022-09-13T17:40:20.780Z",
-      "id": "1Xz-ME2"
-    },
-    {
-      "valor": 99,
-      "destino": "1234-5",
-      "data": "2022-09-13T17:54:39.834Z",
-      "id": "HwzdrYr"
-    },
-    {
-      "valor": 120,
-      "destino": "32221",
-      "data": "2022-09-13T18:17:07.186Z",
-      "id": "8FMJoPf"
-    },
-    {
-      "valor": 100,
-      "destino": "1234-2",
-      "data": "2022-09-13T18:45:42.543Z",
-      "id": "T620e5w"
+      "valor": 12,
+      "destino": "20343",
+      "tipo": "Depósito",
+      "data": "2022-09-14T15:56:32.096Z",
+      "id": 4
     }
   ]
 }

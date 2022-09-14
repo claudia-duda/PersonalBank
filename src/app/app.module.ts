@@ -9,6 +9,7 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 import LocalePt from '@angular/common/locales/pt';
 import { AppRoutingModule } from './app-routing.model';
+import { NovoDepositoComponent } from "./novo-deposito/novo-deposito.component";
 
 registerLocaleData(LocalePt, 'pt');
 
@@ -16,7 +17,8 @@ registerLocaleData(LocalePt, 'pt');
   declarations: [
     AppComponent,
     NovaTransferenciaComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    NovoDepositoComponent
   ],
   imports: [
     BrowserModule,

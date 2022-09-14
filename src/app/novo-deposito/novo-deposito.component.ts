@@ -1,14 +1,17 @@
-import { TransferenciaService } from './../services/transferencia.service';
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Transferencia } from '../services/models/transferencia.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { Transferencia } from '../services/models/transferencia.model';
+import { TransferenciaService } from '../services/transferencia.service';
+
 
 @Component({
-  selector: 'app-nova-transferencia',
-  templateUrl: './nova-transferencia.component.html',
-  styleUrls: ['./nova-transferencia.component.scss'],
+  selector: 'app-novo-deposito',
+  templateUrl: './novo-deposito.component.html',
+  styleUrls: ['./novo-deposito.component.scss']
 })
-export class NovaTransferenciaComponent {
+
+export class NovoDepositoComponent {
+
   @Output() aoTransferir = new EventEmitter<any>();
 
   valor: number = 0;
@@ -17,12 +20,12 @@ export class NovaTransferenciaComponent {
   constructor(private service: TransferenciaService, private router: Router) { }
 
   transferir() {
-    console.log('Solicitada nova transferência');
+    console.log('Solicitada novo Depósito');
     const valorEmitir: Transferencia = {
       valor: this.valor,
       destino: this.destino,
-      tipo: 'Transferência'
-    }
+      tipo: 'Depósito'
+    };
 
     if (this.validarTransferencia(valorEmitir)) {
       this.service.adicionar(valorEmitir).subscribe({
@@ -34,7 +37,7 @@ export class NovaTransferenciaComponent {
         error: (msg) => console.error(msg)
       });
     } else {
-      alert('dados invalidos')
+      alert('dados invalidos');
     }
   }
 
@@ -48,4 +51,5 @@ export class NovaTransferenciaComponent {
       && valorEmitido.valor > 0
       && valorEmitido.destino.toString().length > 4;
   }
+
 }

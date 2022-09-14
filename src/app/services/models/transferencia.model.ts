@@ -3,4 +3,5 @@ export interface Transferencia {
   valor: number;
   destino: number | string;
   data?: string;
+  tipo: string;
 }
