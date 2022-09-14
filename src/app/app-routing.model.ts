@@ -1,5 +1,5 @@
-import { NovoDepositoComponent } from "./novo-deposito/novo-deposito.component";
-import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
+import { NovoDepositoComponent } from "./formularios/novo-deposito/novo-deposito.component";
+import { NovaTransferenciaComponent } from './formularios/nova-transferencia/nova-transferencia.component';
 import { ExtratoComponent } from './extrato/extrato.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';

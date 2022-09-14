@@ -1,5 +1,3 @@
-import { FormularioComponent } from './formularios/formulario/formulario.component';
-import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
 import { LOCALE_ID, NgModule, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,23 +8,21 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 import LocalePt from '@angular/common/locales/pt';
 import { AppRoutingModule } from './app-routing.model';
-import { NovoDepositoComponent } from "./novo-deposito/novo-deposito.component";
+import { FormulariosModule } from './formularios/formularios.module';
 
 registerLocaleData(LocalePt, 'pt');
 
 @NgModule({
   declarations: [
     AppComponent,
-    NovaTransferenciaComponent,
-    ExtratoComponent,
-    NovoDepositoComponent,
-    FormularioComponent
+    ExtratoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormulariosModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},
