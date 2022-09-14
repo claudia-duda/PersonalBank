@@ -14,7 +14,7 @@ export class NovaTransferenciaComponent {
   valor: number = 0;
   destino: number = 0;
 
-  constructor(private service: TransferenciaService, private router : Router) {}
+  constructor(private service: TransferenciaService, private router: Router) { }
 
   transferir() {
     console.log('Solicitada nova transferência');
@@ -23,17 +23,28 @@ export class NovaTransferenciaComponent {
       destino: this.destino
     }
 
-    this.service.adicionar(valorEmitir).subscribe(resultado => {
-      console.log(resultado);
-      this.limparCampos();
-      this.router.navigateByUrl('extrato');
-    },
-    (error) => console.error(error)
-    );
+    if (this.validarTransferencia(valorEmitir)) {
+      this.service.adicionar(valorEmitir).subscribe({
+        next: (resultado) => { 
+          console.log(resultado);
+          this.limparCampos();
+          this.router.navigateByUrl('extrato');
+        },
+        error: (msg) => console.error(msg)
+      });
+    } else {
+      alert('dados invalidos')
+    }
   }
 
-  limparCampos(){
+  private limparCampos() {
     this.valor = 0;
     this.destino = 0;
+  }
+
+  private validarTransferencia(valorEmitido: Transferencia) {
+    return valorEmitido.valor != null 
+      && valorEmitido.valor > 0 
+      && valorEmitido.destino.toString().length > 4;
   }
 }
