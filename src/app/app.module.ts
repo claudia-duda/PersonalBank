@@ -1,14 +1,13 @@
 import { LOCALE_ID, NgModule, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 import LocalePt from '@angular/common/locales/pt';
+
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.model';
 import { FormulariosModule } from './formularios/formularios.module';
+import { ExtratoComponent } from './extrato/extrato.component';
 
 registerLocaleData(LocalePt, 'pt');
 
@@ -20,7 +19,6 @@ registerLocaleData(LocalePt, 'pt');
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
     AppRoutingModule,
     FormulariosModule
   ],

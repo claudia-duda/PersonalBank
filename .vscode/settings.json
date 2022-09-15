@@ -1,0 +1,6 @@
+{
+    "editor.autoSurround": "languageDefined",
+    "prettier.jsxSingleQuote": false,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single"
+}
