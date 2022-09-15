@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { NovoDepositoComponent } from "./formularios/novo-deposito/novo-deposito.component";
 import { NovaTransferenciaComponent } from './formularios/nova-transferencia/nova-transferencia.component';
 import { ExtratoComponent } from './extrato/extrato.component';
@@ -10,7 +11,8 @@ export const routes: Routes = [
   {path: '', redirectTo: 'extrato', pathMatch: 'full'},
   {path: 'extrato', component: ExtratoComponent},
   {path: 'nova-transferencia', component: NovaTransferenciaComponent},
-  {path: 'novo-deposito', component: NovoDepositoComponent}
+  {path: 'novo-deposito', component: NovoDepositoComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({
