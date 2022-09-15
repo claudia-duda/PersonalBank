@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Transferencia } from '../../services/models/transferencia.model';
 import { TransferenciaService } from '../../services/transferencia.service';

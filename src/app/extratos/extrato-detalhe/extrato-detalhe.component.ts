@@ -20,7 +20,7 @@ export class ExtratoDetalheComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params.id;
 
     this.service.todas().subscribe((transferencias: Transferencia[]) => {
-      this.transferencia = transferencias.find(transferencia => transferencia.id == id);
+    this.transferencia = transferencias.find(transferencia => transferencia.id == id);
     });
   }
 

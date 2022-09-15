@@ -13,8 +13,7 @@
         <td class="tabela__conteudo">{{ transferencia.valor | currency}}</td>
         <td class="tabela__conteudo">{{ transferencia.destino }}</td>
         <td class="tabela__conteudo">{{ transferencia.tipo }}</td>
-
-
+        <a routerLink="/extrato/{{transferencia.id}}">Exibir</a>
       </tr>
     </tbody>
   </table>
