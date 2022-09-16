@@ -11,7 +11,7 @@ import { TransferenciaService } from '../../services/transferencia.service';
 })
 export class ExtratoComponent implements OnInit {
   transferencias: any[];
-
+  filtro: string = '';
   constructor(private service: TransferenciaService) {}
 
   ngOnInit() {

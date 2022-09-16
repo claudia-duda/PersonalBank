@@ -24,6 +24,10 @@ export class TransferenciaService {
     return this.httpClient.get<Transferencia[]>(this.url);
   }
 
+  findById(id: number): Observable<Transferencia>{
+    return this.httpClient.get<Transferencia>(`${this.url}/${id}`);
+  }
+
   adicionar(transferencia: Transferencia) : Observable<Transferencia>{
     this.hidratar(transferencia);
 

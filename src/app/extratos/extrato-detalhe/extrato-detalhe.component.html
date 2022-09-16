@@ -1,5 +1,7 @@
-<h2>Extrato {{ transferencia.id }} </h2>
-<p>{{ transferencia.valor | currency}}</p>
-<p>{{ transferencia.destino }}</p>
-<p>{{ transferencia.data }}</p>
-<p>{{ transferencia.tipo }}</p>
+<div *ngIf="transferencia">
+    <h2>Extrato {{ transferencia.id }} </h2>
+    <p>Valor: {{ transferencia.valor | currency}}</p>
+    <p>Conta: {{ transferencia.destino }}</p>
+    <p>Data: {{ transferencia.data | date: 'dd/MM/yyyy hh:mm:ss'}}</p>
+    <p>Tipo: {{ transferencia.tipo }}</p>
+</div>

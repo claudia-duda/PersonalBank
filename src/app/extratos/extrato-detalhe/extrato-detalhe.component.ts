@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Transferencia } from 'src/app/services/models/transferencia.model';
 import { TransferenciaService } from 'src/app/services/transferencia.service';
 
@@ -13,15 +13,23 @@ export class ExtratoDetalheComponent implements OnInit {
 
   constructor(
     private service: TransferenciaService,
-    private activatedRoute: ActivatedRoute) { }
+    private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 
-    const id = this.activatedRoute.snapshot.params.id;
+    const id = this.route.snapshot.params.id;
 
-    this.service.todas().subscribe((transferencias: Transferencia[]) => {
-    this.transferencia = transferencias.find(transferencia => transferencia.id == id);
-    });
+      this.service.findById(id).subscribe({
+        next: (transferencia: Transferencia) => {
+
+          this.transferencia = transferencia;
+        },
+        error: (error) => {
+          if (error.status === 404) {
+            this.router.navigateByUrl('**');
+          }
+        }
+      });
   }
 
 }
