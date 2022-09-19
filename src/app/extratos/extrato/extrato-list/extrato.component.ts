@@ -1,8 +1,8 @@
 import { TransferenciaService } from 'src/app/services/transferencia.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Transferencia, TransferenciaResolved } from 'src/app/services/models/transferencia.model';
 
-import { Transferencia, TransferenciaResolved } from './../../services/models/transferencia.model';
 @Component({
   selector: 'app-extrato',
   templateUrl: './extrato.component.html',
