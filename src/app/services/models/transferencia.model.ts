@@ -6,3 +6,8 @@ export interface Transferencia {
   tipo: string;
   descricao?: string
 }
+
+export interface TransferenciaResolved {
+  transferencia: Transferencia;
+  error?: any;
+}

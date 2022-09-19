@@ -1,17 +1,25 @@
+import { TransferenciaResolved } from './../../services/models/transferencia.model';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 import { Transferencia } from 'src/app/services/models/transferencia.model';
 import { TransferenciaService } from './../../services/transferencia.service';
 
 @Injectable({ providedIn: 'root'})
-export class ExtratoResolver implements Resolve<Observable<Transferencia[]>>{
+export class ExtratoResolver implements Resolve<TransferenciaResolved[]>{
 
   constructor(private service : TransferenciaService){}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Transferencia[]> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
 
-    return this.service.todas();
+    return this.service.todas().pipe(
+      catchError(error => {
+        const message = `Retrieval error backend: ${error}`;
+        console.error(message);
+        return of(error);
+      })
+    )
   }
 }

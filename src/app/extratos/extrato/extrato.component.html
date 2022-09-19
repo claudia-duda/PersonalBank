@@ -1,5 +1,5 @@
 
-<section class="container">
+<section class="container" *ngIf="error == null; else backendError">
   <h2 class="titulo">Transações</h2>
   <table class="tabela">
     <thead class="tabela__cabecalho">
@@ -19,5 +19,17 @@
   <ng-template #listaVazia>
     <p class="tabela__cabecalho__conteudo">Nenhuma operação cadastrada</p>
   </ng-template>
+
 </section>
+
+<ng-template #backendError>
+  <div class="text-center">
+    <h2>Página não disponível</h2>
+    <p>
+      Erro ao acessar os dados através da api
+    </p>
+  </div>
+</ng-template>
+
+
 
