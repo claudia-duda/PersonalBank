@@ -7,13 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { LoadButtonComponent } from './extrato/load-button/load-button.component';
 
 
 
 @NgModule({
   declarations: [
     ExtratoDetalheComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    LoadButtonComponent
   ],
   imports: [
     BrowserModule,

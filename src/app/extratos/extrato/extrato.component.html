@@ -16,6 +16,8 @@
         <a routerLink="/extrato/{{transferencia.id}}">Exibir</a>
   </table>
 
+  <app-load-button (click)="load()" [hasMore]="hasMore"></app-load-button>
+
   <ng-template #listaVazia>
     <p class="tabela__cabecalho__conteudo">Nenhuma operação cadastrada</p>
   </ng-template>
@@ -30,6 +32,8 @@
     </p>
   </div>
 </ng-template>
+
+
 
 
 

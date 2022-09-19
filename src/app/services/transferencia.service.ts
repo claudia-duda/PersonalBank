@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 import { Transferencia } from './models/transferencia.model';
@@ -22,6 +22,12 @@ export class TransferenciaService {
 
   todas(): Observable<Transferencia[]>{
     return this.httpClient.get<Transferencia[]>(this.url);
+  }
+
+  todasPaginated(page: number){
+    const params = new HttpParams()
+      .append('_page', page.toString());
+      return this.httpClient.get<Transferencia[]>(this.url, {params});
   }
 
   findById(id: number): Observable<Transferencia>{

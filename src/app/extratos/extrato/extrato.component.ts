@@ -1,3 +1,4 @@
+import { TransferenciaService } from 'src/app/services/transferencia.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,8 +12,9 @@ export class ExtratoComponent implements OnInit {
   transferencias: Transferencia[];
   filtro: string = '';
   error: any;
-
-  constructor(private activatedRoute: ActivatedRoute) {}
+  hasMore: boolean = true;
+  currentPage: number = 1;
+  constructor(private activatedRoute: ActivatedRoute, private transferenciaService: TransferenciaService) {}
 
   ngOnInit(): void{
     const resolveData: TransferenciaResolved = this.activatedRoute.snapshot.data['extratos'];
@@ -20,6 +22,14 @@ export class ExtratoComponent implements OnInit {
     this.transferencias = this.activatedRoute.snapshot.data['extratos'];
 
 
+  }
+
+  load(){
+    this.transferenciaService.todasPaginated(++this.currentPage).subscribe(transferencias =>{
+      this.transferencias = this.transferencias.concat(...transferencias);
+      if(!transferencias.length) this.hasMore = false;
+
+    })
   }
 }
 

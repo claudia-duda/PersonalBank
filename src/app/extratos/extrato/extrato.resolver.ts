@@ -14,7 +14,7 @@ export class ExtratoResolver implements Resolve<TransferenciaResolved[]>{
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
 
-    return this.service.todas().pipe(
+    return this.service.todasPaginated(1).pipe(
       catchError(error => {
         const message = `Retrieval error backend: ${error}`;
         console.error(message);
