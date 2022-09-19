@@ -1,25 +1,5 @@
 {
   "transferencias": [
-    {
-      "valor": 15,
-      "destino": "0123-05",
-      "tipo": "Transferência",
-      "data": "2022-09-14T15:25:25.743Z",
-      "id": 1
-    },
-    {
-      "valor": 20,
-      "destino": "0123-04",
-      "tipo": "Transferência",
-      "data": "2022-09-14T15:26:01.062Z",
-      "id": 2
-    },
-    {
-      "valor": 50,
-      "destino": "0123-03",
-      "tipo": "Depósito",
-      "data": "2022-09-14T15:26:26.918Z",
-      "id": 3
-    }
+
   ]
 }

@@ -16,6 +16,7 @@ export class FormularioComponent {
 
   valor: number = 0;
   destino: number = 0;
+  descricao: string = '';
 
   @Input() tipo: string = '';
 
@@ -26,7 +27,8 @@ export class FormularioComponent {
     const valorEmitir: Transferencia = {
       valor: this.valor,
       destino: this.destino,
-      tipo: this.tipo
+      tipo: this.tipo,
+      descricao: this.descricao
     };
 
     if (this.validarTransferencia(valorEmitir)) {
@@ -46,6 +48,7 @@ export class FormularioComponent {
   private limparCampos() {
     this.valor = 0;
     this.destino = 0;
+    this.descricao= '';
   }
 
   private validarTransferencia(valorEmitido: Transferencia) {

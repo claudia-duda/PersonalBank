@@ -1,23 +1,21 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
-import { Transferencia } from '../../services/models/transferencia.model';
-import { TransferenciaService } from '../../services/transferencia.service';
-
+import { Transferencia } from './../../services/models/transferencia.model';
 @Component({
   selector: 'app-extrato',
   templateUrl: './extrato.component.html',
   styleUrls: ['./extrato.component.scss'],
 })
 export class ExtratoComponent implements OnInit {
-  transferencias: any[];
+  transferencias: Transferencia[];
   filtro: string = '';
-  constructor(private service: TransferenciaService) {}
 
-  ngOnInit() {
-    this.service.todas().subscribe((transferencias: Transferencia[]) => {
-      console.table(transferencias);
-      this.transferencias = transferencias;
-    });
+  constructor(private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void{
+    this.transferencias = this.activatedRoute.snapshot.data['extratos'];
+
   }
 }
+
