@@ -1,3 +1,4 @@
+import { ClienteModule } from './cliente/cliente.module';
 import { ErrorsModule } from './errors/errors.module';
 import { LOCALE_ID, NgModule, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +23,8 @@ registerLocaleData(LocalePt, 'pt');
     AppRoutingModule,
     FormulariosModule,
     ErrorsModule,
-    ExtratosModule
+    ExtratosModule,
+    ClienteModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},

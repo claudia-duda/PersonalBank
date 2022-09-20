@@ -1,92 +1,33 @@
 {
   "transferencias": [
     {
-      "valor": 2,
-      "destino": "0487-2",
+      "valor": 10,
+      "destino": "2012-01",
       "tipo": "Transferência",
-      "descricao": "Lazer",
-      "data": "2022-09-19T15:31:15.011Z",
+      "descricao": "Salário",
+      "saldo": 0,
+      "data": "2022-09-20T17:41:36.421Z",
       "id": 1
     },
     {
-      "valor": 20.8,
-      "destino": "123-01",
+      "valor": 30,
+      "destino": "123-09",
       "tipo": "Transferência",
-      "descricao": "Segurança",
-      "data": "2022-09-19T15:32:29.792Z",
+      "descricao": "Empréstimo",
+      "saldo": 0,
+      "data": "2022-09-20T17:43:57.261Z",
       "id": 2
     },
     {
-      "valor": 14,
-      "destino": "0123-02",
-      "tipo": "Transferência",
-      "descricao": "Transporte",
-      "data": "2022-09-19T16:35:24.093Z",
-      "id": 3
-    },
-    {
-      "valor": 1,
+      "valor": 20,
       "destino": "123-01",
-      "tipo": "Transferência",
-      "descricao": "Segurança",
-      "data": "2022-09-19T16:35:34.603Z",
-      "id": 4
-    },
-    {
-      "valor": 40,
-      "destino": "123-02",
-      "tipo": "Depósito",
-      "descricao": "Empréstimo",
-      "data": "2022-09-19T16:35:49.887Z",
-      "id": 5
-    },
-    {
-      "valor": 9.22,
-      "destino": "1234-04",
-      "tipo": "Depósito",
-      "descricao": "MEsada",
-      "data": "2022-09-19T16:36:01.875Z",
-      "id": 6
-    },
-    {
-      "valor": 2,
-      "destino": "2343-09",
-      "tipo": "Depósito",
-      "descricao": "Lazer",
-      "data": "2022-09-19T16:36:16.730Z",
-      "id": 7
-    },
-    {
-      "valor": 12,
-      "destino": "2334-0",
-      "tipo": "Transferência",
-      "descricao": "Transporte",
-      "data": "2022-09-19T16:36:25.522Z",
-      "id": 8
-    },
-    {
-      "valor": 12000,
-      "destino": "123-089",
       "tipo": "Depósito",
       "descricao": "Salário",
-      "data": "2022-09-19T16:36:43.972Z",
-      "id": 9
-    },
-    {
-      "valor": 43,
-      "destino": "2334-09",
-      "tipo": "Transferência",
-      "descricao": "Segurança",
-      "data": "2022-09-19T16:37:15.270Z",
-      "id": 10
-    },
-    {
-      "valor": 99,
-      "destino": "1234-86",
-      "tipo": "Transferência",
-      "descricao": "Carro",
-      "data": "2022-09-19T16:37:40.479Z",
-      "id": 11
+      "saldo": 0,
+      "data": "2022-09-20T17:48:14.188Z",
+      "id": 3
     }
-  ]
+  ],
+
+  "clientes": []
 }

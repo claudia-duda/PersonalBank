@@ -1,10 +1,10 @@
-import { TransferenciaResolved } from './../../services/models/transferencia.model';
+import { TransferenciaResolved } from '../../models/transferencia.model';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
-import { Transferencia } from 'src/app/services/models/transferencia.model';
+import { Transferencia } from 'src/app/models/transferencia.model';
 import { TransferenciaService } from './../../services/transferencia.service';
 
 @Injectable({ providedIn: 'root'})

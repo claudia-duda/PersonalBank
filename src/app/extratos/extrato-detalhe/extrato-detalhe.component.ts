@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Transferencia } from 'src/app/services/models/transferencia.model';
+import { Transferencia } from 'src/app/models/transferencia.model';
 import { TransferenciaService } from 'src/app/services/transferencia.service';
 
 @Component({

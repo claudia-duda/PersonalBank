@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
-import { Transferencia } from './models/transferencia.model';
+import { Transferencia } from '../models/transferencia.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransferenciaService {
 
-  private listaTransferencia: any[];
+  private listaTransferencia: Transferencia[];
   private url = 'http://localhost:3000/transferencias';
 
   constructor(private httpClient : HttpClient ) {

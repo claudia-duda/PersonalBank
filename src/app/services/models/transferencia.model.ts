@@ -4,7 +4,8 @@ export interface Transferencia {
   destino: number | string;
   data?: string;
   tipo: string;
-  descricao?: string
+  descricao?: string;
+  saldo: number;
 }
 
 export interface TransferenciaResolved {
