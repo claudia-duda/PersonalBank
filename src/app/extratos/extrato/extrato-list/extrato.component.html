@@ -1,19 +1,19 @@
 
 <section class="container" *ngIf="error == null; else backendError">
   <h2 class="titulo">Transações</h2>
-  <table class="tabela">
+  <table class="tabela" >
     <thead class="tabela__cabecalho">
       <th class="tabela__cabecalho__conteudo"> Data</th>
       <th class="tabela__cabecalho__conteudo"> Valor</th>
       <th class="tabela__cabecalho__conteudo"> Destino</th>
       <th class="tabela__cabecalho__conteudo"> Tipo</th>
     </thead>
-    <tbody *ngIf="transferencias?.length > 0; else listaVazia">
-      <tr class="tabela__linha"*ngFor="let transferencia of transferencias">
-        <td class="tabela__conteudo">{{ transferencia.data | date: short }}</td>
+    <tbody *ngIf="transferencias?.length > 0; else listaVazia" >
+      <tr class="tabela__linha"*ngFor="let transferencia of transferencias" appDarkenOnHover>
+        <td class="tabela__conteudo" >{{ transferencia.data | date: short }}</td>
         <td class="tabela__conteudo">{{ transferencia.valor | currency}}</td>
         <td class="tabela__conteudo">{{ transferencia.tipo }}</td>
-        <a routerLink="/extrato/{{transferencia.id}}">Exibir</a>
+      <td><a routerLink="/extrato/{{transferencia.id}}" >Exibir</a></td>
   </table>
 
   <app-load-button (click)="load()" [hasMore]="hasMore"></app-load-button>
