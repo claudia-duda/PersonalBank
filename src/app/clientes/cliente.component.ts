@@ -9,9 +9,9 @@ import { ClienteService } from '../services/cliente.service';
 
 export class ClienteComponent implements OnInit, OnChanges {
 
-  @Input() saldo: number= 0;
+  @Input() saldo: number = 0;
   nome: string = '';
-  conta: string ='';
+  conta: string = '';
 
   constructor(private service: ClienteService){}
   ngOnChanges(changes: SimpleChanges): void {
@@ -24,13 +24,13 @@ export class ClienteComponent implements OnInit, OnChanges {
 
   validarDados(){
 
-    const cliente =this.service.getCliente()
+    const cliente = this.service.getCliente()
     .subscribe({
-      next(cliente) {
+      next: (cliente) => {
         console.log(cliente.saldo)
         this.saldo = cliente.saldo,
         this.nome = cliente.nome,
-        this.conta = cliente.NumeroConta;
+        this.conta = cliente.NumeroConta.toString();
       },error: (msg) => console.error(msg)
     });
 
