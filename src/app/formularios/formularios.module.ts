@@ -1,3 +1,4 @@
+import { ClienteModule } from 'src/app/clientes/cliente.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +15,9 @@ import { FormularioComponent } from './formulario/formulario.component';
   imports : [
     CommonModule,
     FormsModule,
-    HttpClientModule],
+    HttpClientModule,
+    ClienteModule
+  ],
   declarations: [
     FormularioComponent,
     NovoDepositoComponent,

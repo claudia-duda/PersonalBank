@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     HttpClientModule
-  ]
+  ],
+  exports: [ClienteComponent]
 })
 export class ClienteModule { }

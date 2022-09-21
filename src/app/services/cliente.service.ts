@@ -1,22 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Cliente } from '../models/cliente.model';
+
 import { Observable } from 'rxjs/internal/Observable';
+import { Cliente } from '../models/cliente.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
 
-  private listaTransferencia: Cliente[];
+  private clientes: Cliente[];
   private url = 'http://localhost:3000/clientes';
 
   constructor(private httpClient : HttpClient ) {
-    this.listaTransferencia = [];
-  }
-
-  get transferencias(){
-    return this.listaTransferencia;
+    this.clientes = [];
   }
 
   getAll(): Observable<Cliente[]>{

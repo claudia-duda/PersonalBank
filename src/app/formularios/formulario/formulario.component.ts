@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { takeLast } from 'rxjs';
 
 import { Transferencia } from 'src/app/models/transferencia.model';
 import { TransferenciaService } from 'src/app/services/transferencia.service';
@@ -18,24 +17,18 @@ export class FormularioComponent {
   valor: number = 0;
   destino: number = 0;
   descricao: string = '';
-  saldo: number;
   @Input() tipo: string = '';
 
   constructor(private service: TransferenciaService, private router: Router) { }
 
   transferir() {
     console.log(this.tipo, 'solicitado');
-    if(this.tipo == "Transferência"){
-        this.saldo = this.saldo - this.valor;
-    }else{
-      this.saldo = this.saldo + this.valor;
-    }
+
     const valorEmitir: Transferencia = {
       valor: this.valor,
       destino: this.destino,
       tipo: this.tipo,
-      descricao: this.descricao,
-      saldo: this.saldo
+      descricao: this.descricao
     };
 
     if (this.validarTransferencia(valorEmitir)) {
@@ -57,6 +50,7 @@ export class FormularioComponent {
     this.destino = 0;
     this.descricao= '';
   }
+
 
   private validarTransferencia(valorEmitido: Transferencia) {
     return valorEmitido.valor != null

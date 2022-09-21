@@ -1,4 +1,4 @@
-import { ClienteModule } from './cliente/cliente.module';
+import { ClienteModule } from './clientes/cliente.module';
 import { ErrorsModule } from './errors/errors.module';
 import { LOCALE_ID, NgModule, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { LoadButtonComponent } from './load-button/load-button.component';
 import { ExtratoComponent } from './extrato-list/extrato.component';
 import { RouterModule } from '@angular/router';
+import { ClienteModule } from 'src/app/clientes/cliente.module';
 
 
 

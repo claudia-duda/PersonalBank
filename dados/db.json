@@ -28,6 +28,10 @@
       "id": 3
     }
   ],
-
-  "clientes": []
+  "clientes": [{
+    "id": 1,
+    "nome": "Cláudia",
+    "saldo": 20,
+    "conta": "123-04"
+  }]
 }

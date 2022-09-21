@@ -5,7 +5,6 @@ export interface Transferencia {
   data?: string;
   tipo: string;
   descricao?: string;
-  saldo: number;
 }
 
 export interface TransferenciaResolved {

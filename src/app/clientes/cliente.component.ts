@@ -7,33 +7,44 @@ import { ClienteService } from '../services/cliente.service';
   styleUrls: ['./cliente.component.scss']
 })
 
-export class ClienteComponent implements OnInit{
+export class ClienteComponent implements OnInit, OnChanges {
 
-  saldo: number= 0;
+  @Input() saldo: number= 0;
   nome: string = '';
   conta: string ='';
 
   constructor(private service: ClienteService){}
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
     this.validarDados();
   }
 
   validarDados(){
-    const cliente =this.service.getCliente().subscribe({
+
+    const cliente =this.service.getCliente()
+    .subscribe({
       next(cliente) {
+        console.log(cliente.saldo)
         this.saldo = cliente.saldo,
         this.nome = cliente.nome,
         this.conta = cliente.NumeroConta;
       },error: (msg) => console.error(msg)
     });
-  }
-  sacar() :void{
 
   }
+  sacar(valor: number) :void{
+    if(this.saldo >= valor){
+      this.saldo-=valor;
+    }else {
+      alert('Saldo indisponível');
+    }
+  }
 
-  depositar(): void{
-
+  depositar(valor: number): void{
+    this.saldo+= valor;
   }
 
 
